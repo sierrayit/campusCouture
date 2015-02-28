@@ -16,11 +16,12 @@ app.config.from_object(__name__)
 
 #establishes database connection
 def get_db():
-    top = _app_ctx_stack.top
-    if not hasattr(top, 'sqlite_db'):
-        top.sqlite_db = sqlite3.connect(app.config['DATABASE'])
-        top.sqlite_db.row_factory = sqlite3.row
-    return top.sqlite_db
+    return sqlite3.connect("cc_database.db")
+    #top = _app_ctx_stack.top
+    #if not hasattr(top, 'sqlite_db'):
+    #    top.sqlite_db = sqlite3.connect(app.config['DATABASE'])
+    #    top.sqlite_db.row_factory = sqlite3.row
+    #return top.sqlite_db
 
 #initializes db
 def init_db():
@@ -53,8 +54,9 @@ def register_user():
             error = 'That username is already taken.'
         else:
             db = get_db()
-            db.execute('''insert into user (username, email, pw_hash) values (?, ?, ?)''', [request.form['username'], request.form['email'], request.form['password']])
-            db.commit()
+            c = db.cursor()
+            c.execute('''insert into user (username, password, email, phone, campus) values (?, ?, ?, ?, ?)''', [request.form['username'], request.form['password'], request.form['email'], request.form['phone'], request.form['campus']])
+            c.commit()
             flash('You were successfully registered. Please log in.')
             return redirect(url_for('login'))
     return render_template('register.html', error=error)
@@ -108,5 +110,5 @@ def close_db(exception):
         top.sqlite_db.close()
 
 # start the server with the 'run()' method
-if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+#if __name__ == '__main__':
+#    app.run(host='0.0.0.0')
