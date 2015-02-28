@@ -62,6 +62,20 @@ def register_user():
             return render_template('login.html')
     return render_template('register.html', error=error)
 
+
+
+@app.route('/register', methods=['GET', 'POST'])
+def addDress(): 
+    error = None
+    if request.method == 'POST':
+        db = get_db()
+        c = db.cursor()
+        c.execute('''insert into dresses (size, color, real, real, image) values (?, ?, ?, ?, ?)''', [request.form['username'], request.form['password'], request.form['email'], request.form['phone'], request.form['campus']])
+        c.commit()
+        flash('Dress successfully listed.')
+        return render_template('find.html')
+    return render_template('find.html', error=error)
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     error = None
