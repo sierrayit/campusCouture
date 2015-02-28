@@ -50,8 +50,8 @@ def register_user():
     if request.method == 'POST':
         if request.form['password'] != request.form['password2']:
             error = 'The two passwords you have entered do not match.'
-        elif get_user_id(request.form['username']) is not None: 
-            error = 'That username is already taken.'
+        #elif get_user_id(request.form['username']) is not None: 
+        #    error = 'That username is already taken.'
         else:
             db = get_db()
             c = db.cursor()
