@@ -15,5 +15,6 @@ create table dresses (
        size integer,
        color text not null,
        deposit real,
-       rental real
+       rental real,
+       image text not null
 );

@@ -45,8 +45,6 @@ def go_home():
 
 @app.route('/register', methods=['GET', 'POST'])
 def register_user(): 
-    #if g.user:
-    #    return redirect(url_for('/'))
     error = None
     if request.method == 'POST':
         if request.form['password'] != request.form['password2']:
