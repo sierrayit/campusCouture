@@ -100,7 +100,7 @@ def displayLogin():
 def displayRegister():
 	return render_template('register.html')
 
-@app.route('/register/')
+@app.route('/about/')
 def displayAbout():
 	return render_template('about.html')
 
