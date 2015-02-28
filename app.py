@@ -72,6 +72,7 @@ def login():
         else:
             flash('You have successfully logged in.')
             session['user_id'] = user['user_id']
+            return "got here"
             return redirect(url_for('/'))
     return render_template('login.html', error=error)
 
