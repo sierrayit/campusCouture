@@ -58,7 +58,7 @@ def register_user():
             c.execute('''insert into user (username, password, email, phone, campus) values (?, ?, ?, ?, ?)''', [request.form['username'], request.form['password'], request.form['email'], request.form['phone'], request.form['campus']])
             c.commit()
             flash('You were successfully registered. Please log in.')
-            return redirect(url_for('login'))
+            return redirect(url_for('/login/'))
     return render_template('register.html', error=error)
 
 @app.route('/login', methods=['GET', 'POST'])
