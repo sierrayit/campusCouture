@@ -95,13 +95,13 @@ def displayAbout():
 def displayRegister():
     return render_template('register.html')
 
-@app.route('/about/')
-def displayAbout():
-    return render_template('about.html')
+@app.route('/find/')
+def displayDresses():
+    return render_template('find.html')
 
-#@app.route('/dress_template/')
-#def displayRegister():
-#   return render_template('dress_template.html')
+@app.route('/dress/')
+def displayDress():
+    return render_template('dress_template.html')
 
 @app.teardown_appcontext
 def close_db(exception):
