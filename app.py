@@ -92,10 +92,6 @@ def displayLogin():
 def displayAbout():
 	return render_template('about.html')
 
-@app.route('/register/')
-def displayRegister():
-    return render_template('register.html')
-
 @app.route('/find/')
 def displayDresses():
     return render_template('find.html')
