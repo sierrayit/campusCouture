@@ -53,7 +53,7 @@ def register_user():
 			error = 'Please enter your username.'
 		elif not request.form['email'] or \
 		'@' not in request.form['email']:
-		error = 'Please enter a valid email address.'
+			error = 'Please enter a valid email address.'
 	elif not request.form['password']:
 		error = 'Please enter a valid password.'
 	elif request.form['password'] != request.form['password2']:
@@ -94,15 +94,15 @@ def displayShare():
 
 @app.route('/login/')
 def displayLogin():
-	return render_template('login.html'))
+	return render_template('login.html')
 
 @app.route('/register/')
 def displayRegister():
 	return render_template('register.html')
 
-@app.route('/dress_template/')
-def displayRegister():
-	return render_template('dress_template.html')
+#@app.route('/dress_template/')
+#def displayRegister():
+#	return render_template('dress_template.html')
 
 @app.teardown_appcontext
 def close_db(exception):
