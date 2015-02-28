@@ -84,7 +84,7 @@ def login():
             return redirect(url_for('timeline'))
     return render_template('login.html', error=error)
 
-@app.route('/home/')
+@app.route('/')
 def displayHome():
 	return render_template('index.html')
 
@@ -103,6 +103,10 @@ def displayAbout():
 @app.route('/register/')
 def displayRegister():
 	return render_template('register.html')
+
+@app.route('/about/')
+def displayAbout():
+	return render_template('about.html')
 
 #@app.route('/dress_template/')
 #def displayRegister():
