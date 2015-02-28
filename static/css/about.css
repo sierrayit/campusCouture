@@ -19,3 +19,22 @@ p{
 .lead{
 	text-align:center;
 }
+
+a:link {
+    color: #2e3192;
+}
+
+/* visited link */
+a:visited {
+    color: #2e3192;
+}
+
+/* mouse over link */
+a:hover {
+    color: #a58b00;
+}
+
+/* selected link */
+a:active {
+    color: #2e3192;
+}
