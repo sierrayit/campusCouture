@@ -7,7 +7,7 @@ from flask import Flask, request, session, url_for, redirect, \
 
 
 #configuration
-DATABASE = '/tmp/campuscouture.db'
+DATABASE = '/cc_database.db'
 
 
 #create app
