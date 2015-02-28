@@ -2,6 +2,7 @@ drop table if exists user;
 create table user (
        id  integer primary key autoincrement,
        username text not null,
+       password text not null,
        email text not null,
        phone integer,
        campus text not null,
@@ -13,6 +14,6 @@ create table dresses (
        id integer primary key autoincrement;
        size integer,
        color text not null,
-       deposit integer,
-       rental integer
+       deposit real,
+       rental real
 );
