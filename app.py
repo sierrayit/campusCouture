@@ -37,7 +37,7 @@ def query_db(query, args=(), one=False):
 
 #pull specific things from db
 def get_user_id(username):
-    rv = query_db('select user_id from user where username = ?', [username], one=True)
+    rv = query_db('select id from user where username = ?', [username], one=True)
 
 def go_home():
     if not g.user:
@@ -111,5 +111,6 @@ def close_db(exception):
         top.sqlite_db.close()
 
 # start the server with the 'run()' method
-#if __name__ == '__main__':
-#    app.run(host='0.0.0.0')
+if __name__ == '__main__':
+    app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
+    app.run(host='0.0.0.0')
