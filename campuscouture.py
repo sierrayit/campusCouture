@@ -96,6 +96,10 @@ def displayShare():
 def displayLogin():
 	return render_template('login.html')
 
+@app.route('/about/')
+def displayAbout():
+	return render_template('about.html')
+
 @app.route('/register/')
 def displayRegister():
 	return render_template('register.html')
@@ -109,3 +113,7 @@ def close_db(exception):
 	top = _app_ctx_stack.top
 	if hasattr(top, 'sqlite_db'):
 		top.sqlite_db.close()
+
+# start the server with the 'run()' method
+if __name__ == '__main__':
+    app.run(debug=True)
