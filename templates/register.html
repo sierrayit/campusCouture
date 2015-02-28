@@ -58,22 +58,22 @@
         <img src="/static/reglogo.png" style="margin-bottom:25px; margin-top:40px">
 
         <label for="inputEmail" class="sr-only">E-mail address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <input type="email" class="form-control" placeholder="Email address" required autofocus name = "email" value = "{{request.form.email}}">
 
         <label for="inputPassword" class="sr-only">Username</label>
-        <input type="text" id="inputPassword" class="form-control" placeholder="Username" required>
+        <input type="text" class="form-control" placeholder="Username" required name = "username" value = "{{request.form.username}}">
 
         <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <input type="password" class="form-control" placeholder="Password" required name = "password" value = "{{request.form.password}}" >
 
         <label for="inputPassword" class="sr-only">Confirm Password</label>
-        <input type="password" id="inputPassword2" class="form-control" placeholder="Confirm Password" required>
+        <input type="password" class="form-control" placeholder="Confirm Password" required name = "password2" value = "{{request.form.password}}">
 
         <label for="inputPassword" class="sr-only">Phone number</label>
-        <input type="number" id="inputPassword2" class="form-control" placeholder="Phone number" required>
+        <input type="number" class="form-control" placeholder="Phone number" required name = "phone" value = "{{request.form.phone}}">
 
         <label for="inputPassword" class="sr-only">Campus</label>
-        <input type="text" id="inputPassword2" class="form-control" placeholder="Campus (e.g. Drexel University)" required>
+        <input type="text" class="form-control" placeholder="Campus (e.g. Drexel University)" required name = "campus" value = "{{request.form.campus}}">
         
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up!</button>
 

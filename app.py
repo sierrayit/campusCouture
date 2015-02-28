@@ -49,11 +49,11 @@ def register_user():
     error = None
     if request.method == 'POST':
         if request.form['password'] != request.form['password2']:
+            return "hi"
             error = 'The two passwords you have entered do not match.'
         #elif get_user_id(request.form['username']) is not None: 
         #    error = 'That username is already taken.'
         else:
-            return "hi"
             db = get_db()
             c = db.cursor()
             c.execute('''insert into user (username, password, email, phone, campus) values (?, ?, ?, ?, ?)''', [request.form['username'], request.form['password'], request.form['email'], request.form['phone'], request.form['campus']])
