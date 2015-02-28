@@ -29,10 +29,33 @@
 
   <body>
 
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Campus Couture</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/about">How it works</a></li>
+            <li><a href="/login">Log in</a></li>
+            <li class="active"><a href="/register">Sign up</a></li>
+            <li><a href="/find">Find dresses</a></li>
+            <li><a href="/share">Share a dress</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
     <div class="container">
 
       <form class="form-signin">
-        <h2 class="form-signin-heading">Register for an account:</h2>
+        <img src="/static/reglogo.png" style="margin-bottom:25px; margin-top:40px">
 
         <label for="inputEmail" class="sr-only">E-mail address</label>
         <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
