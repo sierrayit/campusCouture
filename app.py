@@ -48,6 +48,7 @@ def go_home():
 def register_user(): 
     error = None
     if request.method == 'POST':
+        return "hi"
         if request.form['password'] != request.form['password2']:
             error = 'The two passwords you have entered do not match.'
         #elif get_user_id(request.form['username']) is not None: 
