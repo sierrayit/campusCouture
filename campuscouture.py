@@ -17,7 +17,7 @@ app.config.from_object(__name__)
 #establishes database connection
 def get_db():
 	top = _app_ctx_stack.top
-	if not hasattr(top, 'sqlite_db')
+	if not hasattr(top, 'sqlite_db'):
 		top.sqlite_db = sqlite3.connect(app.config['DATABASE'])
 		top.sqlite_db.row)factory = sqlite3.row
 	return top.sqlite_db
@@ -83,6 +83,26 @@ def login():
             session['user_id'] = user['user_id']
             return redirect(url_for('timeline'))
     return render_template('login.html', error=error)
+
+@app.route('/home/')
+def displayHome():
+	return render_template('index.html')
+
+@app.route('/share/')
+def displayShare():
+	return render_template('share.html')
+
+@app.route('/login/')
+def displayLogin():
+	return render_template('login.html'))
+
+@app.route('/register/')
+def displayRegister():
+	return render_template('register.html')
+
+@app.route('/dress_template/')
+def displayRegister():
+	return render_template('dress_template.html')
 
 @app.teardown_appcontext
 def close_db(exception):
