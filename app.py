@@ -57,7 +57,7 @@ def register_user():
             db = get_db()
             c = db.cursor()
             c.execute('''insert into user (username, password, email, phone, campus) values (?, ?, ?, ?, ?)''', [request.form['username'], request.form['password'], request.form['email'], request.form['phone'], request.form['campus']])
-            c.commit()
+            db.commit()
             flash('You were successfully registered. Please log in.')
             return render_template('login.html')
     return render_template('register.html', error=error)
