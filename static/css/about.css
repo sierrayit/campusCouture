@@ -4,5 +4,22 @@ body {
 .starter-template {
   padding: 40px 15px;
   text-align: center;
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
+img{
+	margin-bottom:25px;
+}
+
+.nav{
+	color:#2e3192;
+}
+
+p{
+	text-align:left;
+}
+
+.lead{
+	text-align:center;
+}
