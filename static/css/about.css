@@ -19,3 +19,16 @@ p{
 .lead{
 	text-align:center;
 }
+
+.logo {
+  text-align:center;
+  width:347px;
+  height:200px;
+  margin-bottom:25px;
+  display:block;
+  background:transparent url('/static/aboutlogo.png') center top no-repeat;
+}
+
+.logo:hover {
+  background-image: url('/static/abouthover.png');
+}

@@ -3,10 +3,13 @@
  */
 
 /* Links */
-a,
-a:focus,
-a:hover {
+a
+{
   color: #fff;
+}
+
+a:link{
+  color:#fff;
 }
 
 /* Custom default button */
@@ -37,10 +40,6 @@ body {
   color: black;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
-}
-
-img {
-  margin-bottom:25px;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -168,6 +167,19 @@ img {
   .cover-container {
     width: 700px;
   }
+}
+
+.logo {
+  text-align:center;
+  width:347px;
+  height:200px;
+  margin-bottom:25px;
+  display:block;
+  background:transparent url('/static/logo.png') center top no-repeat;
+}
+
+.logo:hover {
+  background-image: url('/static/logohover.png');
 }
 
 
