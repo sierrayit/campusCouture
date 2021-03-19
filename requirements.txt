@@ -2,6 +2,6 @@ gunicorn==19.0.0
 static3==0.5.1
 wsgiref==0.1.2
 FLask==0.10.1
-Jinja2==2.7.3
+Jinja2==2.11.3
 itsdangerous==0.24
 MarkupSafe==0.23
